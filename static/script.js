@@ -53,7 +53,7 @@ joinBtn.addEventListener('click', async () => {
     // Request Camera and Microphone permissions
     try {
         localStream = await navigator.mediaDevices.getUserMedia({
-            video: { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: 'user' },
+            video: { width: { ideal: 1920 }, height: { ideal: 1080 }, frameRate: { ideal: 30 }, facingMode: 'user' },
             audio: { echoCancellation: true, noiseSuppression: true }
         });
         localVideo.srcObject = localStream;
